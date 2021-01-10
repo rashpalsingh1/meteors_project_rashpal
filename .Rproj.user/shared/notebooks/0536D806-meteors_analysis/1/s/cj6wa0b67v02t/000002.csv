@@ -1,0 +1,6 @@
+"0","meteorite_final %>%"
+"0","  filter(year >= 2000) %>% "
+"0","    group_by(year) %>%"
+"0","    summarise(meteors_found = n())"
+"2","`summarise()` ungrouping output (override with `.groups` argument)
+"

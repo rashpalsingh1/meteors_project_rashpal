@@ -1,0 +1,97 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+```{r}
+library(tidyverse)
+library(here)
+library(scales)
+library(ggrepel)
+```
+
+
+
+
+```{r}
+here::here()
+meteorite_final <- read_csv(here("clean_data/meteorite_final.csv"))
+```
+
+
+
+
+1.Find the names and years found for the 10 largest meteorites in the data.
+```{r}
+meteorite_final %>%
+  arrange(desc(mass)) %>%
+  select(name, year, mass) %>%
+  slice(1:10)
+```
+
+
+3.Find the average mass of meteorites that were recorded falling, vs. those which were just found.
+```{r}
+meteorite_final %>%
+  group_by(fall) %>%
+  summarise(average_mass = round(mean(mass, na.rm = TRUE)))
+  
+  
+```
+
+
+4. Find the number of meteorites in each year, for every year since 2000.
+
+```{r}
+meteorite_final %>%
+  filter(year >= 2000) %>% 
+    group_by(year) %>%
+    summarise(meteors_found = n())
+```
+
+
+######################################
+Extension in ggplot
+
+```{r}
+meteorite_final %>%
+  filter(year >= 2000) %>% 
+    group_by(year) %>%
+    summarise(meteors_found = n()) %>% 
+  ggplot() +
+  aes(x = year, y = meteors_found) +
+  geom_col(fill = "tan4", colour = "black") +
+  labs(
+    y = "Number of Meteors Found",
+    title = "Meteors found since 2000"
+  ) +
+  scale_x_continuous(
+  breaks = seq(2000,2013, by = 1)) + 
+ scale_y_continuous(
+    breaks = seq(0,250, by = 25))
+
+  
+```
+
+
+```{r}
+meteorite_final %>%
+  arrange(desc(mass)) %>%
+  select(name, year, mass, latitude, longtitude) %>%
+  slice(1:10) %>% 
+  ggplot() +
+    aes(x = longtitude, y = latitude, size = mass) +
+  labs(
+    title = "Location of Largest Meteorites"
+  ) +
+  aes(x = longtitude, y = latitude, colour = mass) +
+  geom_point() +
+  ggrepel::geom_label_repel(aes(label = name)) +
+  theme(legend.position="none") +
+ scale_y_continuous(
+    breaks = seq(0,90, by = 10)) +
+  annotate("text", x=-3, y=20, label="largest") +
+  annotate("text", x=-120, y=22, label="smallest")
+  
+
+```
+

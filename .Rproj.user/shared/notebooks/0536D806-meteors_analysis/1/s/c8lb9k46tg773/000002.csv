@@ -1,0 +1,17 @@
+"0","here::here()"
+"1","[1]"
+"1"," ""/Users/rashpal/meteors_project_rashpal"""
+"1","
+"
+"0","meteorite_final <- read_csv(here(""clean_data/meteorite_final.csv""))"
+"2","Parsed with column specification:
+cols(
+  id = [32mcol_double()[39m,
+  name = [31mcol_character()[39m,
+  mass = [32mcol_double()[39m,
+  fall = [31mcol_character()[39m,
+  year = [32mcol_double()[39m,
+  longtitude = [32mcol_double()[39m,
+  latitude = [32mcol_double()[39m
+)
+"

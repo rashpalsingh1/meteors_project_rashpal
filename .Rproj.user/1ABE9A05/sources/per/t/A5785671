@@ -1,0 +1,25 @@
+{
+    "id": "A5785671",
+    "path": "~/meteors_project_rashpal/cleanup.R",
+    "project_path": "cleanup.R",
+    "type": "r_source",
+    "hash": "1965177591",
+    "contents": "",
+    "dirty": false,
+    "created": 1610193256264.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "tempName": "Untitled1",
+        "cursorPosition": "2,0",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1610311081,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1610311081723,
+    "read_only": false,
+    "read_only_alternatives": []
+}

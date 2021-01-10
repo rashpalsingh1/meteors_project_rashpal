@@ -1,0 +1,24 @@
+{
+    "id": "ED8C315E",
+    "path": "~/dirty_data_project_rashpal/task4/data_cleaning_scripts/candy_cleaning_script.R",
+    "project_path": null,
+    "type": "r_source",
+    "hash": "1699772249",
+    "contents": "",
+    "dirty": false,
+    "created": 1610237071837.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "cursorPosition": "135,11",
+        "scrollLine": "131"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1608246470,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1608246470,
+    "read_only": false,
+    "read_only_alternatives": []
+}
